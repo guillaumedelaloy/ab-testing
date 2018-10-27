@@ -87,3 +87,9 @@ As the normality assumption does not hold here, we use a non parametric test cal
 |  gross conversion  | 0.0194  | GC(control) = GC(exp) | GC(control) > GC(exp)|
 |  net conversion    | 0.6039  | NC(control) = NC(exp) | NC(control) < NC(exp)|
 
+<br>
+<br>
+We recommend to do not implement this change because we have a significant lower number of students who enroll in the "start free trial" and we do not observe a better transformation rate between the number of users clicking and the users paying the subscription. 
+<br>
+We should now test some variations such as changing the amout of worked in the message from 5 to 3.
+If the results are not good, then we would conclude this new feature should not be implemented.
