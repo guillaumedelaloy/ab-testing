@@ -30,10 +30,30 @@ The experiment could also negatively affect the number of students choosing the 
 **The invariant metrics** , that is to say, the metrics that should be evenly distributed between the control and the experiment group : number of unique cookies, number of unique cookies clicking on start free trial.
 <br>
 **The evaluation metrics** : 
-- the gross conversion (the number of user ids completing checkout and enrolled, divided by the number of unique cookies clicking on "start free trial")
+- the gross conversion, GC, (the number of user ids completing checkout and enrolled, divided by the number of unique cookies clicking on "start free trial")
 - the net conversion (the number of user ids who payed, i.e enrolled more than 14 days, divided by the number of unique cookies clicking on "start free trial")
 
 
 ### Design the experiment
+<br>
+First we need to determine how much data we need in order to implement an experiment with a good level of confidence.
+We choose:
+```
+Significance level α = 0.5
+
+Statistical power 1−β = 0.8
+
+Minimum pratical difference (GC) = 1%
+
+Minimum pratical difference (NC) = 0.75%
+```
+The minimum practical difference here is a relative change that is considered to have a meaningful impact on business.
+
+I used the following [sample size calculator](http://www.evanmiller.org/ab-testing/sample-size.html) in order to compute the number of pageviews we need to run the experiment.
+
+**number of page views = 685275 page views**
+
+The daily traffic is 40K pageviews, so **we will need 18 days to perform the test** (assuming that all the traffic is involved in the experiment).
+
 
 ### Analysis
