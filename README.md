@@ -8,7 +8,7 @@ If the student clicks **"start free trial"**, they will be asked to enter their 
 **The experiment** consists in asking the following question if the students clicks "start free trial": How much time will you spend on this course per week? If the student writes 5 hours or more, then the student will access the checkout process as before. If the student indicates less than 5 hours, then he will receive a message telling him that this course requires usually at least 5 hours/week. At this point, the student would have the option to continue enrolling in the free trial, or access the course materials for free instead. 
 <br>
 <br>
-The objective of the experiment is to guide the students towards the offer matching their needs. For example, before the experiment, some students were getting frustrated because they couldn't spend enough time on the course and then had to pay while they couldn't really discover the content.
+**The objective** of the experiment is to guide the students towards the offer matching their needs. For example, before the experiment, some students were getting frustrated because they couldn't spend enough time on the course and then had to pay while they couldn't really discover the content.
 <br>
 <br>
 **Hypothesis**: 
