@@ -25,11 +25,11 @@ The experiment could also negatively affect the number of students choosing the 
 
 ### Metrics
 <br>
-** The unit of diversion ** is a cookie. Since users click on "start free trial" before being signed in, or even before having an account, it is not possible to rely on the user_ids.
+**The unit of diversion** is a cookie. Since users click on "start free trial" before being signed in, or even before having an account, it is not possible to rely on the user_ids.
 <br>
-** The invariant metrics ** , that is to say, the metrics that should be evenly distributed between the control and the experiment group : number of unique cookies, number of unique cookies clicking on start free trial.
+**The invariant metrics** , that is to say, the metrics that should be evenly distributed between the control and the experiment group : number of unique cookies, number of unique cookies clicking on start free trial.
 <br>
-** The evaluation metrics ** : 
+**The evaluation metrics** : 
 - the gross conversion (the number of user ids completing checkout and enrolled, divided by the number of unique cookies clicking on "start free trial")
 - the net conversion (the number of user ids who payed, i.e enrolled more than 14 days, divided by the number of unique cookies clicking on "start free trial")
 
