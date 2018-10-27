@@ -82,8 +82,8 @@ As the normality assumption does not hold here, we use a non parametric test cal
 
 **results**
 
-| evaluation metric  | p value | null hyp | alternative hyp |
-| ------------------ | ------- |
-|  gross conversion  | 0.0194  |
-|  net conversion    | 0.6039  |
+| evaluation metric  | p value |        null hyp       |    alternative hyp   |
+| ------------------ | ------- | --------------------- | -------------------- |
+|  gross conversion  | 0.0194  | GC(control) = GC(exp) | GC(control) > GC(exp)|
+|  net conversion    | 0.6039  | NC(control) = NC(exp) | NC(control) < NC(exp)|
 
