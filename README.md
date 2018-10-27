@@ -77,8 +77,8 @@ In order to do this, we usually run a **t test**.
 - independance : the data was randomly divided between the control/experiment groups - > good
 - variance: we check for the homogeneity of variance between the two groups for the evaluation metrics. The Levene test confirms we can accept the null hypothesis for both metrics (p_value(GC) = 0.44, p_value(NC)=0.66).
 - normality: we check the normality of distributions for the metrics for each group. The Shapiro tests reveal that we can't verify this assumption.
-
-As the normality assumption does not hold here, we use a non parametric test called Mann-Whitney U which performs well in those [cases](https://digitalcommons.wayne.edu/cgi/viewcontent.cgi?referer=https://en.wikipedia.org/&httpsredir=1&article=1011&context=coe_tbf)
+** We cannot run a t test**.
+As the normality assumption does not hold here, we use a non parametric test called **Mann-Whitney U** which performs well in those [cases](https://digitalcommons.wayne.edu/cgi/viewcontent.cgi?referer=https://en.wikipedia.org/&httpsredir=1&article=1011&context=coe_tbf)
 
 **results**
 
