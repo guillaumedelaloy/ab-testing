@@ -1,3 +1,5 @@
+### Overview
+
 The objective of this A/B test experiment is to make a recommendation on Udacity's course overview page.
 <br>
 <br>
@@ -19,3 +21,12 @@ If the student clicks **"start free trial"**, they will be asked to enter their 
 **Hypothesis**: 
 The experiment should filter students with higher commitment in the "free trial". As a consequence, we should have a higher rate of students who started the free trial and completed it.
 The experiment could also negatively affect the number of students choosing the free trial.
+
+
+### Metrics
+
+
+
+### Design the experiment
+
+### Analysis
