@@ -49,7 +49,10 @@ Minimum pratical difference (NC) = 0.75%
 ```
 The minimum practical difference here is a relative change that is considered to have a meaningful impact on business.
 
-I used the following [sample size calculator](http://www.evanmiller.org/ab-testing/sample-size.html) in order to compute the number of pageviews we need to run the experiment.
+I used the following [sample size calculator](http://www.evanmiller.org/ab-testing/sample-size.html) in order to compute the number of pageviews we need to run the experiment. The baseline conversion rate for the net conversion is 10.93%. According to the calculator, we need 27411 clicks for each group. Since the ratio click/view is 8%, the number of page views we need is:
+```
+27441 * 2 * (1/0.08) = 685275
+```
 
 **number of page views = 685275 page views**
 
