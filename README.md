@@ -80,3 +80,10 @@ In order to do this, we usually run a **t test**.
 
 As the normality assumption does not hold here, we use a non parametric test called Mann-Whitney U which performs well in those [cases](https://digitalcommons.wayne.edu/cgi/viewcontent.cgi?referer=https://en.wikipedia.org/&httpsredir=1&article=1011&context=coe_tbf)
 
+**results**
+
+| evaluation metric  | p value | null hyp | alternative hyp |
+| ------------------ | ------- |
+|  gross conversion  | 0.0194  |
+|  net conversion    | 0.6039  |
+
