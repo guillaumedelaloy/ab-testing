@@ -1,4 +1,4 @@
-### Overview
+## Overview
 
 The objective of this A/B test experiment is to make a recommendation on Udacity's course overview page.
 <br>
@@ -23,7 +23,7 @@ The experiment should filter students with higher commitment in the "free trial"
 The experiment could also negatively affect the number of students choosing the free trial.
 
 
-### Metrics
+## Metrics
 <br>
 **The unit of diversion** is a cookie. Since users click on "start free trial" before being signed in, or even before having an account, it is not possible to rely on the user_ids.
 <br>
@@ -34,7 +34,7 @@ The experiment could also negatively affect the number of students choosing the 
 - the net conversion (the number of user ids who payed, i.e enrolled more than 14 days, divided by the number of unique cookies clicking on "start free trial")
 
 
-### Design the experiment
+## Design the experiment
 <br>
 First we need to determine how much data we need in order to implement an experiment with a good level of confidence.
 We choose:
@@ -59,4 +59,24 @@ I used the following [sample size calculator](http://www.evanmiller.org/ab-testi
 The daily traffic is 40K pageviews, so **we will need 18 days to perform the test** (assuming that all the traffic is involved in the experiment).
 
 
-### Analysis
+## Analysis
+
+#### sanity checks
+
+We first briefly check that the invariant metrics fall within the expected range during the experiment.
+In order to have the 95% interval confidence we calculate : ``` expected_prob +/- 1.96 * SD ```
+Both number of cookies and number of clicks fall within this range.
+
+#### recommendations
+
+We can now focus on the results of the experiment. 
+We want to test if the proportion of students paying and students enrolled is different between the control group and the experiment group.
+In order to do this, we usually run a **t test**.
+
+**assumptions**
+- independance : the data was randomly divided between the control/experiment groups - > good
+- variance: we check for the homogeneity of variance between the two groups for the evaluation metrics. The Levene test confirms we can accept the null hypothesis for both metrics (p_value(GC) = 0.44, p_value(NC)=0.66).
+- normality: we check the normality of distributions for the metrics for each group. The Shapiro tests reveal that we can't verify this assumption.
+
+As the normality assumption does not hold here, we use a non parametric test called Mann-Whitney U which performs well in those [cases](https://digitalcommons.wayne.edu/cgi/viewcontent.cgi?referer=https://en.wikipedia.org/&httpsredir=1&article=1011&context=coe_tbf)
+
