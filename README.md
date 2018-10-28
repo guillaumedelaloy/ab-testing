@@ -4,10 +4,10 @@ The objective of this A/B test experiment is to make a recommendation on Udacity
 <br>
 <br>
 **Before the experiment**, you had two options on the course overview page: "start free trial" and "access course materials".
-If the student clicks **"start free trial"**, they will be asked to enter their credit card information, and then they will be enrolled in a free trial for the paid version of the course. After 14 days, they will automatically be charged unless they cancel first. If the student clicks **"access course materials"**, they will have access to the course content but will not receive any feedbacks.
+If a student clicks **"start free trial"**, he will be asked to enter his credit card information, and then he will be enrolled in a free trial for the paid version of the course. After 14 days, he will automatically be charged unless he cancels first. If a student clicks **"access course materials"**, he will have access to the course content but will not receive any feedbacks.
 <br>
 <br>
-**The experiment** consists in asking the following question if the students clicks "start free trial": How much time will you spend on this course per week? If the student writes 5 hours or more, then the student will access the checkout process as before. If the student indicates less than 5 hours, then he will receive a message telling him that this course requires usually at least 5 hours/week. At this point, the student would have the option to continue enrolling in the free trial, or access the course materials for free instead. Here is a screenshot explaining the experiment:
+**The experiment** consists in asking the following question if a student clicks "start free trial": How much time will you spend on this course per week? If a student writes 5 hours or more, then the student will access the checkout process as before. If the student indicates less than 5 hours, then he will receive a message telling him that this course requires usually at least 5 hours/week. At this point, the student will have the option to continue enrolling in the free trial, or access to the course materials for free instead. Here is a screenshot explaining the experiment:
 <br>
 <br>
 <p align="center">
@@ -27,11 +27,11 @@ The experiment could also negatively affect the number of students choosing the 
 <br>
 **The unit of diversion** is a cookie. Since users click on "start free trial" before being signed in, or even before having an account, it is not possible to rely on the user_ids.
 <br>
-**The invariant metrics** , that is to say, the metrics that should be evenly distributed between the control and the experiment group : number of unique cookies, number of unique cookies clicking on start free trial.
+**The invariant metrics** , i.e. the metrics that should be evenly distributed between the control and the experiment group : number of unique cookies, number of unique cookies clicking on start free trial.
 <br>
 **The evaluation metrics** : 
 - the gross conversion, GC, (the number of user ids completing checkout and enrolled, divided by the number of unique cookies clicking on "start free trial")
-- the net conversion (the number of user ids who payed, i.e enrolled more than 14 days, divided by the number of unique cookies clicking on "start free trial")
+- the net conversion (the number of user ids who payed, i.e. enrolled more than 14 days, divided by the number of unique cookies clicking on "start free trial")
 
 
 ## Design the experiment
@@ -89,7 +89,7 @@ As the normality assumption does not hold here, we use a non parametric test cal
 
 <br>
 <br>
-We recommend to do not implement this change because we have a significant lower number of students who enroll in the "start free trial" and we do not observe a better transformation rate between the number of users clicking and the users paying the subscription. 
+We recommend not to implement this change because we have a significant lower number of students who enroll in the "start free trial" and we do not observe a better transformation rate between the number of users clicking and the users paying the subscription. 
 <br>
-We should now test some variations such as changing the amout of worked in the message from 5 to 3.
+We should now test some variations such as changing the amount of work in the message from 5 to 3.
 If the results are not good, then we would conclude this new feature should not be implemented.
